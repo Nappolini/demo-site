@@ -1,0 +1,93 @@
+.header
+    grid-column: 1 / span 2
+    background-color: white
+    height: 5em
+
+
+.ham-nav
+    display: flex
+    justify-content: space-between
+    margin-top: 1em
+    
+   
+    
+.logo
+    margin-left: .5em
+    height: 50px
+    width: 50px 
+    background-color: pink
+
+.nav-toggle
+    margin-right: .5em
+    height: 50px 
+    width: 50px
+    display: flex 
+    align-content: flex-end
+    align-items: center
+    cursor: pointer
+
+
+    span,
+    span:before, 
+    span:after
+        content: ""
+        display: block 
+        height: 2px 
+        width: 100%
+        background: #333
+        position: relative 
+
+        transition: all 0.2s ease-in-out
+
+    span::before
+        top: 10px 
+
+    span::after
+        top: -12px
+
+    &:hover span 
+        background: transparent 
+        
+    &:hover span::before, 
+    &:hover span::after
+        transform-origin: center 
+        transform: rotate(0deg)
+        top: 0
+        background-color: #e250ed
+
+    &:hover span::after 
+        transform: rotate(-0deg)
+
+.desktop-nav
+    display: none
+
+@media screen and (min-width: 1226px) 
+    .ham-nav, 
+    .nav-toggle
+        display: none
+
+    
+    .desktop-nav
+        display: flex
+        justify-content: space-between
+
+        ul 
+            display: flex
+           
+            li 
+                margin-top: 2.5em
+                margin-left: 25px 
+                
+                
+                a
+                    
+                    color: black 
+                
+                    &:hover
+                        color: pink
+
+    .logo-2
+        margin-top: 1.5em
+        height: 50px
+        width: 50px 
+        background-color: pink
